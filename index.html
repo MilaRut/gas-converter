@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+  <div id="widget">
+    <h1>Конвертер газов</h1>
+    <fieldset>
+      <label for="gas-select">Выберите газ:</label>
+      <select id="gas-select">
+        <option value="" selected disabled>Выбрать</option>
+        <option value="O3">Озон (O3)</option>
+        <option value="SO2">Диоксид серы (SO2)</option>
+        <option value="NO2">Диоксид азота (NO2)</option>
+        <option value="NO">Оксид азота (NO)</option>
+        <option value="NH3">Аммиак (NH3)</option>
+        <option value="CO">Оксид углерода (CO)</option>
+        <option value="CO2">Диоксид углерода (CO2)</option>
+        <option value="CH4">Метан (CH4)</option>
+        <option value="Cl2">Хлор (Cl2)</option>
+        <option value="H2S">Сероводород (H2S)</option>
+        <option value="HCN">Циановодород (HCN)</option>
+        <option value="HCOH">Формальдегид (HCOH)</option>
+      </select>
+    </fieldset>
+    <fieldset class="radio-btns">
+      <legend>Выберите единицы измерения</legend>
+      <label for="ppm">
+        <span>ppm</span>
+        <input type="radio" name="unit" id="ppm" checked>
+      </label>
+      <label for="mgm3_20">
+        <span>мг/м3<br>t = 20°C</span>
+        <input type="radio" name="unit" id="mgm3_20">
+      </label>
+      <label for="mgm3_0">
+        <span>мг/м3<br>t = 0°C</span>
+        <input type="radio" name="unit" id="mgm3_0">
+      </label>
+      <label for="percent">
+        <span>Об.%</span>
+        <input type="radio" name="unit" id="percent">
+      </label>
+    </fieldset>
+    <fieldset>
+      <label for="input-value">
+        Введите значение
+        <input type="number" id="value-input">
+      </label>
+    </fieldset>
+
+    <div class="buttons">
+      <button type="button" id="convert">Конвертировать</button>
+      <button type="button" id="reset">Сброс</button>
+    </div>
+
+
+    <div id="output">
+      <table>
+        <tr>
+          <th>Единица измерения</th>
+          <th>Значение</th>
+        </tr>
+        <tr>
+          <td id="ppm-unit">ppm</td>
+          <td id="ppm-output"></td>
+        </tr>
+        <tr>
+          <td id="mgm3_20-unit">мг/м3 t = 20°C</td>
+          <td id="mgm3_20-output"></td>
+        </tr>
+        <tr>
+          <td id="mgm3_0-unit">мг/м3 t = 0°C</td>
+          <td id="mgm3_0-output"></td>
+        </tr>
+        <tr>
+          <td id="percent-unit">Об.%</td>
+          <td id="percent-output"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script type="module" src="script2.js"></script>
+</body>
+
+</html>
